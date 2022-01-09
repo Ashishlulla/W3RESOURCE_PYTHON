@@ -165,3 +165,12 @@ def is_pangrams(string):
 
 print(is_pangrams("asdfghjklqwertyuiopzxcvbnm"))
 
+# 13. Write a Python function to create and print a list where the values are square of
+# numbers between 1 and 30 (both included).
+
+def square_range(start, end):
+    return [i * i for i in range(start, end + 1)]
+
+print(square_range(1, 30))
+
+
