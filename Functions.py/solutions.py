@@ -49,3 +49,73 @@ def factorial(num):
         return num * factorial(num-1)
 
 print(factorial(5))
+
+# 6. Write a Python function to check whether a number falls in a given range.
+
+
+def is_in_range(strt, end, num):
+    if strt <= num <= end:
+        return f"Number Falls in a given range"
+    else:
+        return f"Number Falls in a given range"
+
+
+# 7. Write a Python function that accepts a string and calculate the number of upper
+# case letters and lower case letters.
+# Sample String : 'The quick Brow Fox'
+# Expected Output :
+# No. of Upper case characters : 3
+# No. of Lower case Characters : 12
+
+def count_lower_upper(string):
+    upper_count = 0
+    lower_count = 0
+    for i in string:
+        if i.isupper():
+            upper_count += 1
+        elif i.islower():
+            lower_count += 1
+        else:
+            pass
+    return f"No. of Upper case characters :{upper_count}\n" \
+           f"No. of Lower case Characters : {lower_count}"
+
+
+print(count_lower_upper('The quick Brow Fox'))
+
+
+# 8. Write a Python function that takes a list and returns a new list with unique elements
+# of the first list.
+# Sample List : [1,2,3,3,3,3,4,5]
+# Unique List : [1, 2, 3, 4, 5]
+def unique_list(lst):
+    unique = []
+    for i in lst:
+        if i not in unique:
+            unique.append(i)
+        else:
+            pass
+    return unique
+
+
+print(unique_list([1, 2, 3, 3, 3, 3, 4, 5]))
+
+
+# 9. Write a Python function that takes a number as a parameter and
+# check the number is prime or
+# not.
+# Note : A prime number (or a prime) is a natural number greater than 1 and that has no positive
+# divisors other than 1 and itself.
+def is_prime(num):
+    factors = []
+    for i in range(2, num):
+        if num % i == 0:
+            factors.append(i)
+        else:
+            pass
+    if len(factors) > 0:
+        return False
+    else:
+        return True
+
+print(is_prime(12))
