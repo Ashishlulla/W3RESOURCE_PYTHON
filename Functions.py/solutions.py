@@ -119,3 +119,49 @@ def is_prime(num):
         return True
 
 print(is_prime(12))
+
+# 10. Write a Python program to print the even numbers from a given list.
+# Sample List : [1, 2, 3, 4, 5, 6, 7, 8, 9]
+# Expected Result : [2, 4, 6, 8]
+
+def even(lst):
+    return [i for i in lst if i % 2 == 0]
+
+
+print(even([1, 2, 3, 4, 5, 6, 7, 8, 9]))
+
+
+# 11.Write a Python function that checks whether a passed string is palindrome or not.
+# Note: A palindrome is a word, phrase, or sequence that reads the same backward as forward,
+# e.g., madam or nurses run.
+
+def is_palindrome(name):
+    if name == name[::-1]:
+        return True
+    else:
+        return False
+
+
+print(is_palindrome("madam"))
+
+
+# 12.Write a Python function to check whether a string is a pangram or not.
+# Note : Pangrams are words or sentences containing every letter of the alphabet at least once.
+# For example : "asdfghjklqwertyuiopzxcvbnm"
+
+def is_pangrams(string):
+    a = []
+    for i in string:
+        if i not in a and i != " ":
+            a.append(i)
+        else:
+            pass
+    print(a)
+    if len(a) == 26:
+        return True
+    else:
+        return False
+
+
+print(is_pangrams("asdfghjklqwertyuiopzxcvbnm"))
+
