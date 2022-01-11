@@ -88,3 +88,68 @@ square = list(map(lambda x: x**2, a))
 cube = list(map(lambda x: x**3, a))
 print(square)
 print(cube)
+
+#  7.Write a Python program to count the even, odd numbers in a given array of integers using Lambda. Go to the editor
+# Original arrays:
+# [1, 2, 3, 5, 7, 8, 9, 10]
+# Number of even numbers in the above array: 3
+# Number of odd numbers in the above array: 5
+
+a = [1, 2, 3, 5, 7, 8, 9, 10]
+count_even = len(list(filter(lambda x: x % 2==0, a)))
+count_odd = len(list(filter(lambda x: x % 2==1, a)))
+print("no of even in list:", count_even)
+print("no of od in list", count_odd)
+
+# 8. Write a Python program to find the values of length six in a given list using Lambda.
+
+a = ["Ashish", "Bhavesh", "Somesh", "Aadi", "Mitali", "Akshay", "Shruti"]
+b = list(filter(lambda x : len(x) == 6, a))
+print(b)
+
+# 9.Write a Python program to add two given lists using map and lambda.
+# Original list:
+# [1, 2, 3]
+# [4, 5, 6]
+# Result: after adding two list
+# [5, 7, 9]
+
+a, b =[1, 2, 3], [4, 5, 6]
+print(list(map(lambda x, y: x+y, a, b)))
+
+# 10. Write a Python program to find the second lowest grade of any student(s)
+# from the given names and grades of each student using lists and lambda.
+# Input number of students, names and grades of each student.
+#
+student_scores = []
+n = int(input("Enter the number of Student "))
+for i in range(n):
+    name = str(input("Enter the Name of Student: "))
+    grade = float(input("Enter the grade of Student: "))
+    student_scores.append([name, grade])
+
+
+student_sorted = sorted(student_scores, key= lambda x: x[1])
+print(f"Second Lowest Grade: {student_sorted[-2][1]}")
+print(f"Name: {student_sorted[-2][0]}")
+
+# 11.Write a Python program to find numbers divisible by nineteen or thirteen from a list
+# of numbers using Lambda.
+# Orginal list:
+# [19, 65, 57, 39, 152, 639, 121, 44, 90, 190]
+# Numbers of the above list divisible by nineteen or thirteen:
+# [19, 65, 57, 39, 152, 190]
+
+a = [19, 65, 57, 39, 152, 639, 121, 44, 90, 190]
+filtered = list(filter(lambda x: x % 13==0 or x % 19 == 0, a))
+print(filtered)
+
+# 12. Write a Python program to find palindromes in a given list of strings using Lambda. Go to the editor
+# Orginal list of strings:
+# ['php', 'w3r', 'Python', 'abcd', 'Java', 'aaa']
+# List of palindromes:
+# ['php', 'aaa']
+
+a = ['php', 'w3r', 'Python', 'abcd', 'Java', 'aaa']
+filter_palindromes = list(filter(lambda x:x == x[::-1], a))
+print(filter_palindromes)
