@@ -43,3 +43,48 @@ print(f"quintuple of {number} is {quintuple(number)}")
 a = [('English', 88), ('Science', 90), ('Maths', 97), ('Social sciences', 82)]
 a_sorted = sorted(a, key= lambda x: x[1])
 print(a_sorted)
+
+# 4. Write a Python program to sort a list of dictionaries using Lambda.
+# Original list of dictionaries :
+
+# [{'make': 'Nokia', 'model': 216, 'color': 'Black'},
+#  {'make': 'Mi Max', 'model': '2', 'color': 'Gold'},
+#  {'make': 'Samsung', 'model': 7, 'color': 'Blue'}]
+# Sorting the List of dictionaries :
+# [{'make': 'Nokia', 'model': 216, 'color': 'Black'},
+#  {'make': 'Samsung', 'model': 7, 'color': 'Blue'},
+#  {'make': 'Mi Max', 'model': '2', 'color': 'Gold'}]
+
+a = [{'make': 'Nokia', 'model': 216, 'color': 'Black'},
+     {'make': 'Mi Max', 'model': '2', 'color': 'Gold'},
+     {'make': 'Samsung', 'model': 7, 'color': 'Blue'}]
+
+a_sorted = sorted(a, key=lambda x: x["color"])
+print(a_sorted)
+
+# 5. Write a Python program to filter a list of integers using Lambda.
+# Original list of integers:
+# [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# Even numbers from the said list:
+# [2, 4, 6, 8, 10]
+# Odd numbers from the said list:
+# [1, 3, 5, 7, 9]
+
+a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+filter_even = list(filter(lambda x: x % 2==0, a))
+filter_odd = list(filter(lambda x : x % 2 == 1, a))
+print(filter_even, "\n", filter_odd)
+#
+# 6.Write a Python program to square and cube every number in a given list of integers using Lambda. Go to the editor
+# Original list of integers:
+# [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# Square every number of the said list:
+# [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+# Cube every number of the said list:
+# [1, 8, 27, 64, 125, 216, 343, 512, 729, 1000]
+
+a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+square = list(map(lambda x: x**2, a))
+cube = list(map(lambda x: x**3, a))
+print(square)
+print(cube)
