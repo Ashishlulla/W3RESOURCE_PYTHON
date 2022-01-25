@@ -125,4 +125,53 @@ print(square[5:-5])
 
 lst1 = [1, 2, 3, 4]
 lst2 = [4, 5, 6, 7]
-print(list(set(lst1)))
+print(list(set(lst1).symmetric_difference(set(lst2))))
+
+# 20. Write a Python program access the index of a list.
+
+a = [12, 3, 2, 1, 3, 2, 5, 4, 4, 33, 2]
+print([a[i] for i in range(len(a))])
+
+# 21. Write a Python program to convert a list of characters into a string.
+lst = ['a', 's', 'h', 'i', 's', 'h']
+print("".join(lst))
+
+# 22. Write a Python program to find the index of an item in a specified list.
+
+lst = ['a', 's', 'h', 'i', 's', 'h']
+print(lst.index("i"))
+
+# 24. Write a Python program to append a list to the second list.
+lst = ['a', 's', 'h', 'i', 's', 'h']
+num = [1, 2, 3]
+lst.append(num)
+print(lst)
+#
+# 25. Write a Python program to select an item randomly from a list.
+
+import random
+
+lst = ['a', 's', 'h', 'i', 's', 'h']
+print(random.choice(lst))
+
+# 27. Write a Python program to find the second smallest number in a list.
+a = [9, 8, 7, 6, 5, 5, 4, 3, 3]
+a.sort()
+print(a[1])
+
+# 28. Write a Python program to find the second largest number in a list. Go to the editor
+# Click me to see the sample solution
+
+a = [9, 8, 7, 6, 5, 5, 4, 3, 3]
+a.sort()
+print(a[-2])
+
+# 29. Write a Python program to get unique values from a list.
+
+a = [1, 2, 2, 3, 4, 4, 5, 6, 7]
+print([i for i in a if a.count(i) == 1])
+
+# 30. Write a Python program to get the frequency of the elements in a list.
+
+a = [1, 2, 2, 3, 4, 4, 5, 6, 7]
+print({i: a.count(i) for i in a })
