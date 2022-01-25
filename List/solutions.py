@@ -84,4 +84,45 @@ for i in a:
 
 a = ['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow']
 b = [a[i] for i in range(len(a)) if i != 0 and i != 4 and i != 5]
+
 print(b)
+
+# 13. Write a Python program to generate a 3*4*6 3D array whose each element is *. Go to the editor
+# Click me to see the sample solution
+
+matrix = []
+for i in range(3):
+    for j in range(4):
+        for k in range(6):
+            matrix.append([i, j, k])
+
+print(matrix)
+
+# 14. Write a Python program to print the numbers of a specified list after removing even numbers from it. Go to the editor
+# Click me to see the sample solution
+
+a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+print([i for i in a if i % 2 != 0])
+# 15. Write a Python program to shuffle and print a specified list.
+
+import random
+
+a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+random.shuffle(a)
+print(a)
+# 16. Write a Python program to generate and print a list of first and last 5 elements where the
+# values are square of numbers between 1 and 30 (both included)
+square = [i ** 2 for i in range(1, 31)]
+print(square[:5] + square[-5:])
+
+# 17. Write a Python program to generate and print a list except for the first 5 elements, where the values
+# are square of numbers between 1 and 30 (both included).
+
+square = [i ** 2 for i in range(1, 31)]
+print(square[5:-5])
+
+# 19. Write a Python program to get the difference between the two lists.
+
+lst1 = [1, 2, 3, 4]
+lst2 = [4, 5, 6, 7]
+print(list(set(lst1)))
